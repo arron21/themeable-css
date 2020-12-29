@@ -1,0 +1,7 @@
+// import all SCSS files into this file so it compiles into 1 CSS File
+// Tip: name files that are meant to be imported like '_file.scss' so that the SCSS compiler does not compile them individually
+@import '_example';
+
+.example-class {
+    color: $example;
+}
