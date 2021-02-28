@@ -3,6 +3,10 @@ button {
     box-shadow: var(--shadow);
     border: 2px groove rgba(0,0,0,.2);
     font-weight: 600;
+
+    &.icon {
+        padding-left: 36px;
+    }
     
     &.primary , &.warning, &.success, &.danger {
         color: #fff;

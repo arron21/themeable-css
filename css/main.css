@@ -84,6 +84,8 @@ button {
   box-shadow: var(--shadow);
   border: 2px groove rgba(0, 0, 0, 0.2);
   font-weight: 600; }
+  button.icon {
+    padding-left: 20px; }
   button.primary, button.warning, button.success, button.danger {
     color: #fff; }
   button.primary {
