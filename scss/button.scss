@@ -1,27 +1,74 @@
 button {
+    cursor: pointer;
     padding: var(--pad);
-    box-shadow: var(--shadow);
-    border: 2px groove rgba(0,0,0,.2);
+    // box-shadow: var(--shadow);
+    // border: 2px groove rgba(0,0,0,.2);
+    border: none;
+    border-radius: var(--radius);
     font-weight: 600;
 
     &.icon {
         padding-left: 36px;
-    }
+        position: relative;
     
-    &.primary , &.warning, &.success, &.danger {
-        color: #fff;
+        i {
+            img {
+                height: 18px;
+            }
+            background-color: rgba(0,0,0,.2);
+            font-style: normal;
+            width: 31.5px;
+            height: 31.5px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: var(--radius) 0 0 var(--radius);
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
     }
+
+
+
+
+    &.primary ,&.success, &.danger {
+        color: #fff;
+        img {
+            filter: invert(1);
+        }
+    }
+
     &.primary {
         background-color: var(--primary);
     }
     &.warning {
         background-color: var(--warning);
         color: var(--contrast-high);
+        img {
+            height: 18px;
+            filter: invert(0) !important;
+        }
     }
     &.success {
         background-color: var(--success);
     }
     &.danger {
         background-color: var(--danger);
+    }
+}
+
+button.icon.hover {
+    * {
+
+        transition: all 200ms ease-out;
+    }
+}
+
+button.icon.hover:hover {
+    i {
+        width: 100%;
+        background: inherit;
+        border-radius: var(--radius);
     }
 }
