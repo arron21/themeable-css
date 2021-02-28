@@ -2,6 +2,11 @@
 // Tip: name files that are meant to be imported like '_file.scss' so that the SCSS compiler does not compile them individually
 @import '_example';
 
+@import 'card';
+@import 'variables';
+@import 'themes';
+@import 'layout';
+
 .example-class {
     color: $example;
 }

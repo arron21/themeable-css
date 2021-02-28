@@ -1,0 +1,45 @@
+.card {
+    margin: var(--pad) 0;
+    border: 1px solid var(--contrast);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    figure {
+        margin: 0;
+        overflow: hidden;
+        border-radius: 2px;
+        max-height: 150px;
+        transition: 250ms all ease-in-out;
+        img {
+            transition: 5250ms all ease-in-out;
+
+        }
+        &:hover {
+            max-height: 400px;
+            img {
+                transform: scale(1.1);
+            }
+        }
+
+    }
+    header {
+        padding: var(--pad);
+        font-weight: 600;
+        font-size: 1.2em;
+    }
+    footer {
+        border-top: 1px solid var(--contrast);
+        display: flex;
+        justify-content: stretch;
+        align-items: center;
+        > * {
+            flex: 1;
+            padding: var(--pad);
+        }
+    }
+    &_content {
+        flex: 1;
+        padding: var(--pad);
+    }
+}

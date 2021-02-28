@@ -1,0 +1,23 @@
+section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: min-content;
+    gap: 10px;
+
+    @media screen and (min-width: 1381px) { 
+        grid-template-columns: repeat(5, 1fr);
+    }
+    @media screen and (max-width: 1380px) { 
+        grid-template-columns: repeat(4, 1fr);
+    }
+    @media screen and (max-width: 1080px) { 
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media screen and (max-width: 880px) { 
+        grid-template-columns: repeat(3, 1fr);
+    }
+    @media screen and (max-width: 500px) { 
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
