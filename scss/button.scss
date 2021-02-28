@@ -1,0 +1,23 @@
+button {
+    padding: var(--pad);
+    box-shadow: var(--shadow);
+    border: 2px groove rgba(0,0,0,.2);
+    font-weight: 600;
+    
+    &.primary , &.warning, &.success, &.danger {
+        color: #fff;
+    }
+    &.primary {
+        background-color: var(--primary);
+    }
+    &.warning {
+        background-color: var(--warning);
+        color: var(--contrast-high);
+    }
+    &.success {
+        background-color: var(--success);
+    }
+    &.danger {
+        background-color: var(--danger);
+    }
+}

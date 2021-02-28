@@ -1,0 +1,10 @@
+.navbar {
+    display: flex;
+    background-color: var(--contrast);
+    a {
+        text-decoration: none;
+
+        color: var(--contrast-medium);
+        padding: var(--pad);
+    }
+}

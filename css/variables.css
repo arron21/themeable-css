@@ -1,4 +1,8 @@
 :root {
+  --primary: hsl(204, 90%, 45%);
+  --success: hsl(102, 63%, 48%);
+  --warning: hsl(48, 100%, 50%);
+  --danger: hsl(18, 88%, 46%);
   --background: #eff;
   --contrast: #ddd;
   --contrast-medium: rgb(121, 121, 121);

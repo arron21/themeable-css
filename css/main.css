@@ -8,7 +8,7 @@
   .card figure {
     margin: 0;
     overflow: hidden;
-    border-radius: 2px;
+    border-radius: 2px 2px 0 0;
     max-height: 150px;
     transition: 250ms all ease-in-out; }
     .card figure img {
@@ -34,6 +34,10 @@
     padding: var(--pad); }
 
 :root {
+  --primary: hsl(204, 90%, 45%);
+  --success: hsl(102, 63%, 48%);
+  --warning: hsl(48, 100%, 50%);
+  --danger: hsl(18, 88%, 46%);
   --background: #eff;
   --contrast: #ddd;
   --contrast-medium: rgb(121, 121, 121);
@@ -66,6 +70,31 @@ section {
   @media screen and (max-width: 500px) {
     section {
       grid-template-columns: repeat(1, 1fr); } }
+
+.navbar {
+  display: flex;
+  background-color: var(--contrast); }
+  .navbar a {
+    text-decoration: none;
+    color: var(--contrast-medium);
+    padding: var(--pad); }
+
+button {
+  padding: var(--pad);
+  box-shadow: var(--shadow);
+  border: 2px groove rgba(0, 0, 0, 0.2);
+  font-weight: 600; }
+  button.primary, button.warning, button.success, button.danger {
+    color: #fff; }
+  button.primary {
+    background-color: var(--primary); }
+  button.warning {
+    background-color: var(--warning);
+    color: var(--contrast-high); }
+  button.success {
+    background-color: var(--success); }
+  button.danger {
+    background-color: var(--danger); }
 
 .example-class {
   color: dodgerblue; }
