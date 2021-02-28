@@ -1,0 +1,27 @@
+.badge {
+    padding: calc(var(--pad) / 2) var(--pad);
+    filter: contrast(.7);
+    border-radius: 100px;
+    font-size: .8em;
+    text-transform: lowercase;
+    letter-spacing: 1px;
+    
+    background-color: var(--contrast);
+    &.primary {
+        background-color: var(--primary);
+    }
+    &.warning {
+        background-color: var(--warning);
+        color: var(--contrast-high);
+        img {
+            height: 18px;
+            filter: invert(0) !important;
+        }
+    }
+    &.success {
+        background-color: var(--success);
+    }
+    &.danger {
+        background-color: var(--danger);
+    }
+}

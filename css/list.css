@@ -1,0 +1,19 @@
+ul {
+  margin: var(--pad) 0;
+  padding: 0;
+  border: 1px solid var(--contrast);
+  list-style: none; }
+  ul.large li {
+    padding: calc(var(--pad) * 2); }
+  ul li {
+    position: relative;
+    padding: var(--pad); }
+    ul li:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      display: block;
+      height: 1px;
+      width: 100%;
+      background: var(--contrast); }
