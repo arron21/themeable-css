@@ -78,6 +78,23 @@ section {
     text-decoration: none;
     color: var(--contrast-medium);
     padding: var(--pad); }
+  .navbar.sidenav {
+    flex-direction: column; }
+    .navbar.sidenav .closesidenav {
+      padding: var(--pad); }
+    .navbar.sidenav.fixed {
+      position: fixed;
+      z-index: 2;
+      min-width: 240px;
+      max-width: 80%;
+      transition: 300ms all ease-in-out; }
+      .navbar.sidenav.fixed:not(.active) {
+        transform: translateX(-240px); }
+      .navbar.sidenav.fixed.active {
+        transform: translateX(0px); }
+      .navbar.sidenav.fixed.left {
+        top: 0;
+        left: 0; }
 
 button {
   cursor: pointer;

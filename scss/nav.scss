@@ -7,4 +7,29 @@
         color: var(--contrast-medium);
         padding: var(--pad);
     }
+
+    &.sidenav {
+        flex-direction: column;
+        .closesidenav {
+            padding: var(--pad);
+        }
+        &.fixed {
+            position: fixed;
+            z-index: 2;
+            min-width: 240px;
+            max-width: 80%;
+            transition: 300ms all ease-in-out;
+            &:not(.active) {
+                transform: translateX(-240px);
+            }
+            &.active {
+                transform: translateX(0px);
+
+            }
+            &.left {
+                top: 0;
+                left: 0;
+            }
+        }
+    }
 }
