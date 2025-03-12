@@ -1,0 +1,68 @@
+:root {
+    --primary: var(--orange);
+    --primary-dark: var(--orange-dark);
+    --danger: var(--red);
+    --warning: var(--yellow);
+    --info: var(--purple);
+    --background: var(--white);
+    --foreground: var(--black);
+    --off-background: var(--off-white);
+    --off-foreground: var(--off-black);
+    --dark-type: oklch(91.09% 0.007 247.9);
+    --light-type: oklch(26.21% 0.009 248.19);
+    --card-bg: oklch(25% 0 0);
+  }
+  
+  html {
+    color: var(--light-type);
+    background-color: var(--background);
+  }
+  
+  .light {
+    --input-bg: var(--off-white);
+    --type-color: var(--light-type);
+    --card-bg: oklch(97% 0 0);
+    color: var(--type-color);
+    background-color: var(--background);
+  }
+  
+  .dark {
+    --blue: oklch(0.45 0.06 246.55);
+    --primary: var(--blue);
+    --green: oklch(0.43 0.08 153.77);
+    --red: oklch(0.44 0.11 18.58);
+    --gray: oklch(0.46 0 0);
+  
+    --type-color: var(--dark-type);
+    --background: var(--neutral-1);
+    --foreground: var(--off-black);
+    --input-bg: var(--foreground);
+    --off-background: var(--off-black);
+    --off-foreground: var(--off-white);
+    --card-bg: oklch(25% 0 0);
+    background-color: var(--background);
+    color: var(--type-color);
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    body {  
+    --type-color: var(--neutral-4);
+    --background: var(--neutral-7);
+    --input-bg: var(--foreground);
+    --off-background: var(--off-black);
+    --off-foreground: var(--off-white);
+    --card-bg: oklch(25% 0 0);
+    background: var(--background);
+    color: var(--type-color);
+    }
+  }
+
+  :root {
+    color-scheme: light dark;
+  }
+  body {
+    color: var(--neutral-7);
+    background-color: var(--neutral-1);
+  }
+  
+  

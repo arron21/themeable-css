@@ -32,18 +32,17 @@ button {
 
 
 
-    &.primary ,&.success, &.danger {
-        color: #fff;
+    &.primary ,&.success, &.danger {;
         img {
             filter: invert(1);
         }
     }
 
     &.primary {
-        background-color: var(--primary);
+        background-color: var(--primary-4);
     }
     &.warning {
-        background-color: var(--warning);
+        background-color: var(--warning-4);
         color: var(--contrast-high);
         img {
             height: 18px;
@@ -51,10 +50,10 @@ button {
         }
     }
     &.success {
-        background-color: var(--success);
+        background-color: var(--success-4);
     }
     &.danger {
-        background-color: var(--danger);
+        background-color: var(--danger-4);
     }
 }
 
