@@ -1,27 +1,29 @@
 .badge {
     padding: calc(var(--pad) / 2) var(--pad);
-    filter: contrast(.7);
     border-radius: 100px;
     font-size: .8em;
     text-transform: lowercase;
     letter-spacing: 1px;
     
-    background-color: var(--contrast);
+    background-color: var(--neutral-3);
+    color: var(--neutral-6);
     &.primary {
-        background-color: var(--primary);
+        background-color: var(--primary-1);
+        color: var(--primary-5);
+
     }
     &.warning {
-        background-color: var(--warning);
-        color: var(--contrast-high);
-        img {
-            height: 18px;
-            filter: invert(0) !important;
-        }
+        background-color: var(--warning-1);
+        color: var(--warning-5);
+
     }
     &.success {
-        background-color: var(--success);
+        background-color: var(--success-1);
+        color: var(--success-5);
+
     }
     &.danger {
-        background-color: var(--danger);
+        background-color: var(--danger-1);
+        color: var(--danger-5);
     }
 }

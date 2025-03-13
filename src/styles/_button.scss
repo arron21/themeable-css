@@ -1,11 +1,17 @@
 button {
     cursor: pointer;
     padding: var(--pad);
-    // box-shadow: var(--shadow);
-    // border: 2px groove rgba(0,0,0,.2);
     border: none;
     border-radius: var(--radius);
     font-weight: 600;
+    color: white;
+    background-color: var(--neutral-4);
+
+    &[disabled] {
+        opacity: .5;
+        cursor: not-allowed;
+    }
+
 
     &.icon {
         padding-left: 36px;
@@ -17,8 +23,8 @@ button {
             }
             background-color: rgba(0,0,0,.2);
             font-style: normal;
-            width: 31.5px;
-            height: 31.5px;
+            width: 30px;
+            height: 100%;
             display: inline-flex;
             align-items: center;
             justify-content: center;
@@ -31,8 +37,10 @@ button {
 
 
 
-
-    &.primary ,&.success, &.danger {;
+    img {
+        filter: invert(1);
+    }
+    &.primary ,&.success, &.danger {
         img {
             filter: invert(1);
         }
@@ -43,10 +51,9 @@ button {
     }
     &.warning {
         background-color: var(--warning-4);
-        color: var(--contrast-high);
         img {
             height: 18px;
-            filter: invert(0) !important;
+            filter: invert(1) !important;
         }
     }
     &.success {

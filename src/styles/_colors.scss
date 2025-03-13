@@ -2,13 +2,17 @@
     color-scheme: light dark;
 
     /* Neutral Shades */
-    --neutral-1: light-dark(oklch(100% 0.005 25), oklch(20% 0.005 25));
-    --neutral-2: light-dark(oklch(65% 0.01 25), oklch(30% 0.01 25));
-    --neutral-3: light-dark(oklch(52% 0.015 25), oklch(40% 0.015 25));
-    --neutral-4: light-dark(oklch(39% 0 265), oklch(50% 0 265));
-    --neutral-5: light-dark(oklch(26% 0 265), oklch(60% 0 265));
-    --neutral-6: light-dark(oklch(13% 0 265), oklch(70% 0 265));
-    --neutral-7: light-dark(oklch(0% 0 265), oklch(80% 0 265));
+    --neutral-1: light-dark(oklch(100% 0 265), oklch(10% 0 265));
+    --neutral-2: light-dark(oklch(98% 0 265), oklch(20% 0 265));
+    --neutral-3: light-dark(oklch(80% 0 265), oklch(30% 0 265));
+    --neutral-4: light-dark(oklch(70% 0 265), oklch(40% 0 265));
+    --neutral-5: light-dark(oklch(60% 0 265), oklch(50% 0 265));
+    --neutral-6: light-dark(oklch(50% 0 265), oklch(60% 0 265));
+    --neutral-7: light-dark(oklch(40% 0 265), oklch(70% 0 265));
+    --neutral-8: light-dark(oklch(30% 0 265), oklch(80% 0 265));
+    --neutral-9: light-dark(oklch(20% 0 265), oklch(98% 0 265));
+    --neutral-10: light-dark(oklch(10% 0 265), oklch(100% 0 265));
+    
 
     /* Primary Colors */
     --primary-1: light-dark(oklch(90% 0.08 260), oklch(30% 0.08 260));

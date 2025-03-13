@@ -1,6 +1,7 @@
 .card {
     margin: var(--pad) 0;
-    border: 1px solid var(--contrast);
+    border: 1px solid var(--neutral-2);
+    background: light-dark(var(--neutral-1), var(--neutral-3)) ;
     border-radius: var(--radius);
     box-shadow: var(--shadow);
     display: flex;

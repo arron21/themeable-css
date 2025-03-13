@@ -1,6 +1,7 @@
 .card {
   margin: var(--pad) 0;
-  border: 1px solid var(--contrast);
+  border: 1px solid var(--neutral-2);
+  background: light-dark(var(--neutral-1), var(--neutral-3));
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   display: flex;
@@ -45,13 +46,16 @@
 :root {
   color-scheme: light dark;
   /* Neutral Shades */
-  --neutral-1: light-dark(oklch(100% 0.005 25), oklch(20% 0.005 25));
-  --neutral-2: light-dark(oklch(65% 0.01 25), oklch(30% 0.01 25));
-  --neutral-3: light-dark(oklch(52% 0.015 25), oklch(40% 0.015 25));
-  --neutral-4: light-dark(oklch(39% 0 265), oklch(50% 0 265));
-  --neutral-5: light-dark(oklch(26% 0 265), oklch(60% 0 265));
-  --neutral-6: light-dark(oklch(13% 0 265), oklch(70% 0 265));
-  --neutral-7: light-dark(oklch(0% 0 265), oklch(80% 0 265));
+  --neutral-1: light-dark(oklch(100% 0 265), oklch(10% 0 265));
+  --neutral-2: light-dark(oklch(98% 0 265), oklch(20% 0 265));
+  --neutral-3: light-dark(oklch(80% 0 265), oklch(30% 0 265));
+  --neutral-4: light-dark(oklch(70% 0 265), oklch(40% 0 265));
+  --neutral-5: light-dark(oklch(60% 0 265), oklch(50% 0 265));
+  --neutral-6: light-dark(oklch(50% 0 265), oklch(60% 0 265));
+  --neutral-7: light-dark(oklch(40% 0 265), oklch(70% 0 265));
+  --neutral-8: light-dark(oklch(30% 0 265), oklch(80% 0 265));
+  --neutral-9: light-dark(oklch(20% 0 265), oklch(98% 0 265));
+  --neutral-10: light-dark(oklch(10% 0 265), oklch(100% 0 265));
   /* Primary Colors */
   --primary-1: light-dark(oklch(90% 0.08 260), oklch(30% 0.08 260));
   --primary-2: light-dark(oklch(80% 0.12 260), oklch(40% 0.12 260));
@@ -180,6 +184,12 @@ button {
   border: none;
   border-radius: var(--radius);
   font-weight: 600;
+  color: white;
+  background-color: var(--neutral-4);
+}
+button[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 button.icon {
   padding-left: 36px;
@@ -188,8 +198,8 @@ button.icon {
 button.icon i {
   background-color: rgba(0, 0, 0, 0.2);
   font-style: normal;
-  width: 31.5px;
-  height: 31.5px;
+  width: 30px;
+  height: 100%;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -201,6 +211,9 @@ button.icon i {
 button.icon i img {
   height: 18px;
 }
+button img {
+  filter: invert(1);
+}
 button.primary img, button.success img, button.danger img {
   filter: invert(1);
 }
@@ -209,11 +222,10 @@ button.primary {
 }
 button.warning {
   background-color: var(--warning-4);
-  color: var(--contrast-high);
 }
 button.warning img {
   height: 18px;
-  filter: invert(0) !important;
+  filter: invert(1) !important;
 }
 button.success {
   background-color: var(--success-4);
@@ -234,35 +246,34 @@ button.icon.hover:hover i {
 
 .badge {
   padding: calc(var(--pad) / 2) var(--pad);
-  filter: contrast(0.7);
   border-radius: 100px;
   font-size: 0.8em;
   text-transform: lowercase;
   letter-spacing: 1px;
-  background-color: var(--contrast);
+  background-color: var(--neutral-3);
+  color: var(--neutral-6);
 }
 .badge.primary {
-  background-color: var(--primary);
+  background-color: var(--primary-1);
+  color: var(--primary-5);
 }
 .badge.warning {
-  background-color: var(--warning);
-  color: var(--contrast-high);
-}
-.badge.warning img {
-  height: 18px;
-  filter: invert(0) !important;
+  background-color: var(--warning-1);
+  color: var(--warning-5);
 }
 .badge.success {
-  background-color: var(--success);
+  background-color: var(--success-1);
+  color: var(--success-5);
 }
 .badge.danger {
-  background-color: var(--danger);
+  background-color: var(--danger-1);
+  color: var(--danger-5);
 }
 
 ul {
   margin: var(--pad) 0;
   padding: 0;
-  border: 1px solid var(--contrast);
+  border: 1px solid var(--neutral-3);
   list-style: none;
 }
 ul.large li {
@@ -280,7 +291,7 @@ ul li:after {
   display: block;
   height: 1px;
   width: 100%;
-  background: var(--contrast);
+  background: var(--neutral-3);
 }
 
 :root {
@@ -345,8 +356,50 @@ html {
 }
 
 body {
-  color: var(--neutral-7);
-  background-color: var(--neutral-1);
+  color: var(--neutral-9);
+  background-color: var(--neutral-2);
+}
+
+.switch {
+  margin: 6px 0;
+  border: 1px solid #ddd;
+  border-radius: 9999px;
+  width: 40px;
+  height: 20px;
+  position: relative;
+}
+
+input {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background: #B0BEC5;
+  border-radius: 9999px;
+  transition: all 215ms ease-in-out;
+}
+
+input:checked + label::before {
+  background: #2196F3;
+  transform: translateX(20px);
 }
 
 .color-square {
