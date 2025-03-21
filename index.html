@@ -9,171 +9,211 @@
 
     <script src="js/themeable.js"></script>
 </head>
-<body>
-    <h1>Themeable CSS</h1>
-    <p>What is Themeable CSS?</p>
-    <p>Themeable CSS is a simple CSS framework that is meant to be easily configurable to support various color themes.</p>
+<body class="light">
+    <header>
+        <h1>Themeable CSS</h1>
+        <p>What is Themeable CSS?</p>
+        <p>Themeable CSS is a simple CSS framework that is meant to be easily configurable to support various color themes.</p>
+    </header>
 
-    <h2>Colors</h2>
-    
-    <h2>Cards</h2>
-    <section>
+    <main>
 
-        <div class="card">
-            <header>Card Header</header>
-            <div class="card_content">
-                A simple card
+        
+        <section id="cards">
+            <h2>Cards</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <header>Card Header</header>
+                    <div class="card_content">
+                        A simple card
+                    </div>
+                </div>
+                <div class="card">
+                    <figure>
+                        <img src="https://assets.codepen.io/178084/IMG_8245.jpg" alt="" />
+                    </figure>
+                    <header>Card Header</header>
+                    <div class="card_content">
+                        A card with an image
+                    </div>
+                </div>
+                <div class="card">
+                    <header>Card Header</header>
+                    <div class="card_content">
+                        A card with footer
+                    </div>
+                    <footer>
+                        <a href="#">link</a>
+                        <a href="#">link</a>
+                    </footer>
+                </div>
             </div>
-        </div>
-        <div class="card">
-            <figure>
-                <img src="data:image/jpeg;base64,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" />
-            </figure>
-            <header>Card Header</header>
-            <div class="card_content">
-                A card with an image
+        </section>
+
+        <section id="navigation">
+            <h2>Navigation</h2>
+            <nav class="navbar">
+                <a href="#">Home</a>
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+            </nav>
+
+            <nav class="navbar sidenav  left active">
+                <div class="closesidenav">Close</div>
+
+                <a href="#">Home</a>
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+            </nav>
+        </section>
+
+        <section id="buttons">
+            <h2>Buttons</h2>
+            <div class="button-examples">
+                <button>Default Button</button>
+                <button class="primary">Primary</button>
+                <button class="success">Success</button>
+                <button class="warning">Warning</button>
+                <button class="danger">Danger</button>
             </div>
-        </div>
-        <div class="card">
-            <header>Card Header</header>
-            <div class="card_content">
-                A card with footer
+
+            <h4>Disabled Buttons</h4>
+            <div class="button-examples">
+                <button disabled>Default Button</button>
+                <button class="primary" disabled>Primary</button>
+                <button class="success" disabled>Success</button>
+                <button class="warning" disabled>Warning</button>
+                <button class="danger" disabled>Danger</button>
             </div>
-            <footer>
-                <a href="#">link</a>
-                <a href="#">link</a>
-                
-            </footer>
-        </div>
-    </section>
 
-    <h2>Navigation</h2>
+            <h3>Icon Buttons</h3>
+            <div class="button-examples">
+                <button class="icon"><i><img src="img/add.svg" /></i>Default Button</button>
+                <button class="primary icon"><i><img src="img/add.svg" /></i>Primary</button>
+                <button class="success icon"><i><img src="img/add.svg" /></i>Success</button>
+                <button class="warning icon"><i><img src="img/warning.svg" /></i>Warning</button>
+                <button class="danger icon"><i><img src="img/trash.svg" /></i>Danger</button>
+            </div>
 
-    <nav class="navbar">
-        <a href="#">Home</a>
-        <a href="#">Link 1</a>
-        <a href="#">Link 2</a>
-    </nav>
+            <h4>Icon Buttons with Hover</h4>
+            <div class="button-examples">
+                <button class="primary icon hover"><i><img src="img/add.svg" /></i>Primary</button>
+                <button class="success icon hover"><i><img src="img/add.svg" /></i>Success</button>
+                <button class="warning icon hover"><i><img src="img/warning.svg" /></i>Warning</button>
+                <button class="danger icon hover"><i><img src="img/trash.svg" /></i>Danger</button>
+            </div>
+        </section>
 
-    <nav class="navbar sidenav  left active">
-        <div class="closesidenav">Close</div>
+        <section id="badges">
+            <h2>Badges</h2>
+            <span class="badge">default</span>
+            <span class="badge primary">Primary</span>
+            <span class="badge success">Success</span>
+            <span class="badge warning">Warning</span>
+            <span class="badge danger">Danger</span>
+        </section>
 
-        <a href="#">Home</a>
-        <a href="#">Link 1</a>
-        <a href="#">Link 2</a>
-    </nav>
+        <section id="switches">
+            <h2>Switches</h2>
+            <div class="switch">
+                <input type="checkbox" id="fancy-checkbox" />
+                <label for="fancy-checkbox"></label>
+            </div>
+        </section>
 
-    <h2>Buttons</h2>
-    <button>Default Button</button>
-    <button class="primary">Primary</button>
-    <button class="success">Success</button>
-    <button class="warning">Warning</button>
-    <button class="danger">Danger</button>
+        <section id="lists">
+            <h2>Lists</h2>
+            <h3>default list</h3>
+            <ul>
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+            </ul>
+            <h3>large list</h3>
+            <ul class="large">
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+            </ul>
+        </section>
 
-    <h4>Disabled Buttons</h4>
-    <button disabled>Default Button</button>
-    <button class="primary" disabled>Primary</button>
-    <button class="success" disabled>Success</button>
-    <button class="warning" disabled>Warning</button>
-    <button class="danger" disabled>Danger</button>
+        <section id="inputs">
+            <h2>Inputs</h2>
+            <div class="field">
+                <label for="text-input">Text Input</label>
+                <input type="text" id="text-input" placeholder="Enter text here..." />
+            </div>
+            <div class="field inline-label">
+                <label for="text-input">Text Input</label>
+                <input type="text" id="text-input" placeholder="Enter text here..." />
+            </div>
 
+            <div class="field inline-label right">
+                <label for="text-input">Text Input</label>
+                <input type="text" id="text-input" placeholder="Enter text here..." />
+            </div>
 
-    <h3>Icon Buttons</h3>
+ 
+        </section>
 
-    <button class="icon"><i><img src="img/add.svg" /></i>Default Button</button>
-    <button class="primary icon"><i><img src="img/add.svg" /></i>Primary</button>
-    <button class="success icon"><i><img src="img/add.svg" /></i>Success</button>
-    <button class="warning icon"><i><img src="img/warning.svg" /></i>Warning</button>
-    <button class="danger icon"><i><img src="img/trash.svg" /></i>Danger</button>
+        <section id="colors">
+            <h2>Colors</h2>
+            <div class="color-squares">
+                <div class="color-square" style="background-color: var(--neutral-1);">Neutral 1</div>
+                <div class="color-square" style="background-color: var(--neutral-2);">Neutral 2</div>
+                <div class="color-square" style="background-color: var(--neutral-3);">Neutral 3</div>
+                <div class="color-square" style="background-color: var(--neutral-4);">Neutral 4</div>
+                <div class="color-square" style="background-color: var(--neutral-5);">Neutral 5</div>
+                <div class="color-square" style="background-color: var(--neutral-6);">Neutral 6</div>
+                <div class="color-square" style="background-color: var(--neutral-7);">Neutral 7</div>
+                <div class="color-square" style="background-color: var(--primary-1);">Primary 1</div>
+                <div class="color-square" style="background-color: var(--primary-2);">Primary 2</div>
+                <div class="color-square" style="background-color: var(--primary-3);">Primary 3</div>
+                <div class="color-square" style="background-color: var(--primary-4);">Primary 4</div>
+                <div class="color-square" style="background-color: var(--primary-5);">Primary 5</div>
+                <div class="color-square" style="background-color: var(--primary-6);">Primary 6</div>
+                <div class="color-square" style="background-color: var(--primary-7);">Primary 7</div>
+                <div class="color-square" style="background-color: var(--secondary-1);">Secondary 1</div>
+                <div class="color-square" style="background-color: var(--secondary-2);">Secondary 2</div>
+                <div class="color-square" style="background-color: var(--secondary-3);">Secondary 3</div>
+                <div class="color-square" style="background-color: var(--secondary-4);">Secondary 4</div>
+                <div class="color-square" style="background-color: var(--secondary-5);">Secondary 5</div>
+                <div class="color-square" style="background-color: var(--secondary-6);">Secondary 6</div>
+                <div class="color-square" style="background-color: var(--secondary-7);">Secondary 7</div>
+                <div class="color-square" style="background-color: var(--success-1);">Success 1</div>
+                <div class="color-square" style="background-color: var(--success-2);">Success 2</div>
+                <div class="color-square" style="background-color: var(--success-3);">Success 3</div>
+                <div class="color-square" style="background-color: var(--success-4);">Success 4</div>
+                <div class="color-square" style="background-color: var(--success-5);">Success 5</div>
+                <div class="color-square" style="background-color: var(--success-6);">Success 6</div>
+                <div class="color-square" style="background-color: var(--success-7);">Success 7</div>
+                <div class="color-square" style="background-color: var(--danger-1);">Danger 1</div>
+                <div class="color-square" style="background-color: var(--danger-2);">Danger 2</div>
+                <div class="color-square" style="background-color: var(--danger-3);">Danger 3</div>
+                <div class="color-square" style="background-color: var(--danger-4);">Danger 4</div>
+                <div class="color-square" style="background-color: var(--danger-5);">Danger 5</div>
+                <div class="color-square" style="background-color: var(--danger-6);">Danger 6</div>
+                <div class="color-square" style="background-color: var(--danger-7);">Danger 7</div>
+                <div class="color-square" style="background-color: var(--warning-1);">Warning 1</div>
+                <div class="color-square" style="background-color: var(--warning-2);">Warning 2</div>
+                <div class="color-square" style="background-color: var(--warning-3);">Warning 3</div>
+                <div class="color-square" style="background-color: var(--warning-4);">Warning 4</div>
+                <div class="color-square" style="background-color: var(--warning-5);">Warning 5</div>
+                <div class="color-square" style="background-color: var(--warning-6);">Warning 6</div>
+                <div class="color-square" style="background-color: var(--warning-7);">Warning 7</div>
+                <div class="color-square" style="background-color: var(--info-1);">Info 1</div>
+                <div class="color-square" style="background-color: var(--info-2);">Info 2</div>
+                <div class="color-square" style="background-color: var(--info-3);">Info 3</div>
+                <div class="color-square" style="background-color: var(--info-4);">Info 4</div>
+                <div class="color-square" style="background-color: var(--info-5);">Info 5</div>
+                <div class="color-square" style="background-color: var(--info-6);">Info 6</div>
+                <div class="color-square" style="background-color: var(--info-7);">Info 7</div>
+            </div>
+        </section>
+    </main>
 
-
-    <h4>Icon Buttons with Hover</h3>
-    <button class="primary icon hover"><i><img src="img/add.svg" /></i>Primary</button>
-    <button class="success icon hover"><i><img src="img/add.svg" /></i>Success</button>
-    <button class="warning icon hover"><i><img src="img/warning.svg" /></i>Warning</button>
-    <button class="danger icon hover"><i><img src="img/trash.svg" /></i>Danger</button>
-
-
-    <h2>Badges</h2>
-    <span class="badge">default</span>
-    <span class="badge primary">Primary</span>
-    <span class="badge success">Success</span>
-    <span class="badge warning">Warning</span>
-    <span class="badge danger">Danger</span>
-
-    <h2>Switches</h2>
-    <div class="switch">
-        <input type="checkbox" id="fancy-checkbox" />
-        <label for="fancy-checkbox"></label>
-      </div>
-
-
-    <h2>Lists</h2>
-    <h3>default list</h3>
-    <ul>
-        <li>Item 1</li>
-        <li>Item 2</li>
-        <li>Item 3</li>
-    </ul>
-    <h3>large list</h3>
-    <ul class="large">
-        <li>Item 1</li>
-        <li>Item 2</li>
-        <li>Item 3</li>
-    </ul>
-
-
-    <h2>Colors</h2>
-    <div class="color-squares">
-        <div class="color-square" style="background-color: var(--neutral-1);">Neutral 1</div>
-        <div class="color-square" style="background-color: var(--neutral-2);">Neutral 2</div>
-        <div class="color-square" style="background-color: var(--neutral-3);">Neutral 3</div>
-        <div class="color-square" style="background-color: var(--neutral-4);">Neutral 4</div>
-        <div class="color-square" style="background-color: var(--neutral-5);">Neutral 5</div>
-        <div class="color-square" style="background-color: var(--neutral-6);">Neutral 6</div>
-        <div class="color-square" style="background-color: var(--neutral-7);">Neutral 7</div>
-        <div class="color-square" style="background-color: var(--primary-1);">Primary 1</div>
-        <div class="color-square" style="background-color: var(--primary-2);">Primary 2</div>
-        <div class="color-square" style="background-color: var(--primary-3);">Primary 3</div>
-        <div class="color-square" style="background-color: var(--primary-4);">Primary 4</div>
-        <div class="color-square" style="background-color: var(--primary-5);">Primary 5</div>
-        <div class="color-square" style="background-color: var(--primary-6);">Primary 6</div>
-        <div class="color-square" style="background-color: var(--primary-7);">Primary 7</div>
-        <div class="color-square" style="background-color: var(--secondary-1);">Secondary 1</div>
-        <div class="color-square" style="background-color: var(--secondary-2);">Secondary 2</div>
-        <div class="color-square" style="background-color: var(--secondary-3);">Secondary 3</div>
-        <div class="color-square" style="background-color: var(--secondary-4);">Secondary 4</div>
-        <div class="color-square" style="background-color: var(--secondary-5);">Secondary 5</div>
-        <div class="color-square" style="background-color: var(--secondary-6);">Secondary 6</div>
-        <div class="color-square" style="background-color: var(--secondary-7);">Secondary 7</div>
-        <div class="color-square" style="background-color: var(--success-1);">Success 1</div>
-        <div class="color-square" style="background-color: var(--success-2);">Success 2</div>
-        <div class="color-square" style="background-color: var(--success-3);">Success 3</div>
-        <div class="color-square" style="background-color: var(--success-4);">Success 4</div>
-        <div class="color-square" style="background-color: var(--success-5);">Success 5</div>
-        <div class="color-square" style="background-color: var(--success-6);">Success 6</div>
-        <div class="color-square" style="background-color: var(--success-7);">Success 7</div>
-        <div class="color-square" style="background-color: var(--danger-1);">Danger 1</div>
-        <div class="color-square" style="background-color: var(--danger-2);">Danger 2</div>
-        <div class="color-square" style="background-color: var(--danger-3);">Danger 3</div>
-        <div class="color-square" style="background-color: var(--danger-4);">Danger 4</div>
-        <div class="color-square" style="background-color: var(--danger-5);">Danger 5</div>
-        <div class="color-square" style="background-color: var(--danger-6);">Danger 6</div>
-        <div class="color-square" style="background-color: var(--danger-7);">Danger 7</div>
-        <div class="color-square" style="background-color: var(--warning-1);">Warning 1</div>
-        <div class="color-square" style="background-color: var(--warning-2);">Warning 2</div>
-        <div class="color-square" style="background-color: var(--warning-3);">Warning 3</div>
-        <div class="color-square" style="background-color: var(--warning-4);">Warning 4</div>
-        <div class="color-square" style="background-color: var(--warning-5);">Warning 5</div>
-        <div class="color-square" style="background-color: var(--warning-6);">Warning 6</div>
-        <div class="color-square" style="background-color: var(--warning-7);">Warning 7</div>
-        <div class="color-square" style="background-color: var(--info-1);">Info 1</div>
-        <div class="color-square" style="background-color: var(--info-2);">Info 2</div>
-        <div class="color-square" style="background-color: var(--info-3);">Info 3</div>
-        <div class="color-square" style="background-color: var(--info-4);">Info 4</div>
-        <div class="color-square" style="background-color: var(--info-5);">Info 5</div>
-        <div class="color-square" style="background-color: var(--info-6);">Info 6</div>
-        <div class="color-square" style="background-color: var(--info-7);">Info 7</div>
-    </div>
+    <footer>
+        <p>© 2023 Themeable CSS - Created by Arron McCrory</p>
+    </footer>
 </body>
 </html>

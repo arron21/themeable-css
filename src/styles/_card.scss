@@ -13,8 +13,9 @@
         max-height: 150px;
         transition: 250ms all ease-in-out;
         img {
-            transition: 5250ms all ease-in-out;
+            transition: 250ms all ease-in-out;
 
+            width: 100%;
         }
         &:hover {
             max-height: 400px;

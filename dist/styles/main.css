@@ -15,7 +15,8 @@
   transition: 250ms all ease-in-out;
 }
 .card figure img {
-  transition: 5250ms all ease-in-out;
+  transition: 250ms all ease-in-out;
+  width: 100%;
 }
 .card figure:hover {
   max-height: 400px;
@@ -113,38 +114,6 @@
   --shadow: 0 1px 0px rgba(0,0,0,0.12), 0 1px 1px rgba(0,0,0,0.24);
 }
 
-section {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: min-content;
-  gap: 10px;
-}
-@media screen and (min-width: 1381px) {
-  section {
-    grid-template-columns: repeat(5, 1fr);
-  }
-}
-@media screen and (max-width: 1380px) {
-  section {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-@media screen and (max-width: 1080px) {
-  section {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-@media screen and (max-width: 880px) {
-  section {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-@media screen and (max-width: 500px) {
-  section {
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
-
 .navbar {
   display: flex;
   background-color: var(--contrast);
@@ -153,6 +122,9 @@ section {
   text-decoration: none;
   color: var(--contrast-medium);
   padding: var(--pad);
+}
+.navbar a:hover {
+  text-decoration: underline;
 }
 .navbar.sidenav {
   flex-direction: column;
@@ -319,7 +291,7 @@ html {
   --type-color: var(--light-type);
   --card-bg: oklch(97% 0 0);
   color: var(--type-color);
-  background-color: var(--background);
+  background-color: var(--neutral-10);
 }
 
 .dark {
@@ -368,24 +340,21 @@ body {
   height: 20px;
   position: relative;
 }
-
-input {
+.switch input {
   position: absolute;
   opacity: 0;
   width: 100%;
   height: 100%;
   cursor: pointer;
 }
-
-label {
+.switch label {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
 }
-
-label::before {
+.switch label::before {
   content: "";
   position: absolute;
   top: 0;
@@ -396,10 +365,67 @@ label::before {
   border-radius: 9999px;
   transition: all 215ms ease-in-out;
 }
-
-input:checked + label::before {
+.switch input:checked + label::before {
   background: #2196F3;
   transform: translateX(20px);
+}
+
+.field {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-block-end: calc(var(--pad) * 2);
+}
+.field label {
+  display: block;
+  font-weight: 600;
+}
+.field:not(.inline-label) label {
+  margin-block-end: var(--pad);
+}
+.field.inline-label {
+  flex-direction: row;
+  align-items: center;
+}
+.field.inline-label label {
+  display: block;
+  font-weight: 600;
+  margin-inline-end: var(--pad);
+}
+.field.label-left {
+  flex-direction: row;
+}
+.field.right {
+  flex-direction: row-reverse;
+}
+.field.right label {
+  margin-inline-start: var(--pad);
+}
+.field input[type=text],
+.field input[type=email],
+.field input[type=password],
+.field textarea,
+.field select {
+  background-color: var(--neutral-1);
+  color: var(--neutral-10);
+  border: 1px solid var(--neutral-10);
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  flex: 1;
+  box-sizing: border-box;
+}
+.field input::placeholder,
+.field textarea::placeholder {
+  color: oklch(70% 0 265deg); /* softer neutral placeholder */
+}
+.field input:focus,
+.field textarea:focus,
+.field select:focus {
+  border-color: var(--primary-5);
+  box-shadow: 0 0 0 3px color-mix(in oklab, var(--primary-4) 50%, transparent);
+  outline: none;
 }
 
 .color-square {

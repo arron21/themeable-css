@@ -1,0 +1,72 @@
+.field {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-block-end: calc(var(--pad) * 2);
+  label {
+    display: block;
+    font-weight: 600;
+  }
+  
+  &:not(.inline-label) {
+    label {
+      margin-block-end: var(--pad);
+    } 
+  }
+
+  &.inline-label {
+    flex-direction: row;
+    align-items: center;
+    label {
+      display: block;
+      font-weight: 600;
+      margin-inline-end: var(--pad);
+    }
+
+  }
+
+
+
+  &.label-left {
+    flex-direction: row;
+    label {
+    }
+  }
+
+  &.right {
+    flex-direction: row-reverse;
+    label {
+      margin-inline-start: var(--pad);
+    }
+  }
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  textarea,
+  select {
+    background-color: var(--neutral-1);
+    color: var(--neutral-10);
+    border: 1px solid var(--neutral-10);
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+    flex: 1;
+    box-sizing: border-box;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: oklch(70% 0 265); /* softer neutral placeholder */
+  }
+
+  input:focus,
+  textarea:focus,
+  select:focus {
+    border-color: var(--primary-5);
+    box-shadow: 0 0 0 3px
+      color-mix(in oklab, var(--primary-4) 50%, transparent);
+    outline: none;
+  }
+}

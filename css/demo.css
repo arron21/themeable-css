@@ -1,2 +1,59 @@
 html {
-  font-family: Arial, Helvetica, sans-serif; }
+  font-family: Arial, Helvetica, sans-serif; 
+}
+
+/* Basic Page Layout */
+body {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  /* color: var(--neutral-10); */
+}
+
+h1 {
+  font-size: 2.5rem;
+  border-bottom: 2px solid var(--primary-4);
+  padding-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+  border-bottom: 1px solid var(--neutral-3);
+  padding-bottom: 0.5rem;
+}
+
+section {
+  margin: 2rem 0;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+/* Color squares layout */
+.color-squares {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.color-square {
+  height: 100px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: var(--neutral-1);
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Cards layout */
+/* .
