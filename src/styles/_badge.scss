@@ -5,25 +5,25 @@
     text-transform: lowercase;
     letter-spacing: 1px;
     
-    background-color: var(--neutral-3);
+    background-color: var(--neutral-mid);
     color: var(--neutral-6);
     &.primary {
-        background-color: var(--primary-1);
-        color: var(--primary-5);
+        background-color: var(--primary-light);
+        color: var(--primary-dark);
 
     }
     &.warning {
-        background-color: var(--warning-1);
-        color: var(--warning-5);
+        background-color: var(--warning-light);
+        color: var(--warning-dark);
 
     }
     &.success {
-        background-color: var(--success-1);
-        color: var(--success-5);
+        background-color: var(--success-light);
+        color: var(--success-dark);
 
     }
     &.danger {
-        background-color: var(--danger-1);
-        color: var(--danger-5);
+        background-color: var(--danger-light);
+        color: var(--danger-dark);
     }
 }

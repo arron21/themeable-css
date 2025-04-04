@@ -1,9 +1,9 @@
 .card {
     margin: var(--pad) 0;
-    border: 1px solid var(--neutral-2);
-    background: light-dark(var(--neutral-1), var(--neutral-3)) ;
+    background: light-dark(oklch(95% 0 265), oklch(10% 0 265));
+    // border: var(--border-width) solid var(--neutral-light);
     border-radius: var(--radius);
-    box-shadow: var(--shadow);
+    box-shadow: var(--card-shadow);
     display: flex;
     flex-direction: column;
     figure {
@@ -45,3 +45,4 @@
         padding: var(--pad);
     }
 }
+

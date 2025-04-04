@@ -1,10 +1,15 @@
 .switch {
     margin: 6px 0;
-    border: 1px solid #ddd;
+    border: var(--border-width) solid;
+    border-color: light-dark(var(--neutral-mid) var(--neutral-light));
     border-radius: 9999px;
     width: 40px;
     height: 20px;
     position: relative;
+    transition: border-color 215ms ease-in-out;
+    &:has(input:checked) {
+      border-color: var(--primary-mid);
+    }
 
   input {
     position: absolute;
@@ -15,6 +20,8 @@
   }
   
   label {
+    cursor: pointer;
+
     position: absolute;
     top: 0;
     left: 0;
@@ -29,13 +36,13 @@
     left: 0;
     width: 20px;
     height: 20px;
-    background: #B0BEC5;
+    background-color: var(--neutral-dark);
     border-radius: 9999px;
     transition: all 215ms ease-in-out;
   }
   
   input:checked + label::before {
-    background: #2196F3;
+    background: var(--primary-mid);
     transform: translateX(20px);
   }
 }

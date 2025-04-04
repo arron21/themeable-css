@@ -5,8 +5,7 @@ button {
     border-radius: var(--radius);
     font-weight: 600;
     color: white;
-    background-color: var(--neutral-4);
-
+    background-color: var(--neutral-mid);
     &[disabled] {
         opacity: .5;
         cursor: not-allowed;
@@ -47,20 +46,20 @@ button {
     }
 
     &.primary {
-        background-color: var(--primary-4);
+        background-color: var(--primary-mid);
     }
     &.warning {
-        background-color: var(--warning-4);
+        background-color: var(--warning-mid);
         img {
             height: 18px;
             filter: invert(1) !important;
         }
     }
     &.success {
-        background-color: var(--success-4);
+        background-color: var(--success-mid);
     }
     &.danger {
-        background-color: var(--danger-4);
+        background-color: var(--danger-mid);
     }
 }
 

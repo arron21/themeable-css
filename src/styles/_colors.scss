@@ -1,70 +1,38 @@
 :root {
     color-scheme: light dark;
 
-    /* Neutral Shades */
-    --neutral-1: light-dark(oklch(100% 0 265), oklch(10% 0 265));
-    --neutral-2: light-dark(oklch(98% 0 265), oklch(20% 0 265));
-    --neutral-3: light-dark(oklch(80% 0 265), oklch(30% 0 265));
-    --neutral-4: light-dark(oklch(70% 0 265), oklch(40% 0 265));
-    --neutral-5: light-dark(oklch(60% 0 265), oklch(50% 0 265));
-    --neutral-6: light-dark(oklch(50% 0 265), oklch(60% 0 265));
-    --neutral-7: light-dark(oklch(40% 0 265), oklch(70% 0 265));
-    --neutral-8: light-dark(oklch(30% 0 265), oklch(80% 0 265));
-    --neutral-9: light-dark(oklch(20% 0 265), oklch(98% 0 265));
-    --neutral-10: light-dark(oklch(10% 0 265), oklch(100% 0 265));
+    /* Neutral Colors */
+    --neutral-light: light-dark(oklch(95% 0 265), oklch(20% 0 265));
+    --neutral-mid: light-dark(oklch(80% 0 265), oklch(30% 0 265));
+    --neutral-dark: light-dark(oklch(20% 0 265), oklch(90% 0 265));
     
-
     /* Primary Colors */
-    --primary-1: light-dark(oklch(90% 0.08 260), oklch(30% 0.08 260));
-    --primary-2: light-dark(oklch(80% 0.12 260), oklch(40% 0.12 260));
-    --primary-3: light-dark(oklch(70% 0.16 260), oklch(50% 0.16 260));
-    --primary-4: light-dark(oklch(60% 0.20 260), oklch(60% 0.20 260));
-    --primary-5: light-dark(oklch(50% 0.22 260), oklch(70% 0.22 260));
-    --primary-6: light-dark(oklch(40% 0.20 260), oklch(80% 0.20 260));
-    --primary-7: light-dark(oklch(30% 0.18 260), oklch(90% 0.18 260));
+    --primary-light: light-dark(oklch(85% 0.10 260), oklch(40% 0.10 260));
+    --primary-mid: light-dark(oklch(60% 0.20 260), oklch(60% 0.20 260));
+    --primary-dark: light-dark(oklch(35% 0.20 260), oklch(85% 0.15 260));
 
     /* Secondary Colors */
-    --secondary-1: light-dark(oklch(90% 0.08 80), oklch(30% 0.08 80));
-    --secondary-2: light-dark(oklch(80% 0.12 80), oklch(40% 0.12 80));
-    --secondary-3: light-dark(oklch(70% 0.16 80), oklch(50% 0.16 80));
-    --secondary-4: light-dark(oklch(60% 0.20 80), oklch(60% 0.20 80));
-    --secondary-5: light-dark(oklch(50% 0.22 80), oklch(70% 0.22 80));
-    --secondary-6: light-dark(oklch(40% 0.20 80), oklch(80% 0.20 80));
-    --secondary-7: light-dark(oklch(30% 0.18 80), oklch(90% 0.18 80));
+    --secondary-light: light-dark(oklch(85% 0.10 80), oklch(40% 0.10 80));
+    --secondary-mid: light-dark(oklch(60% 0.20 80), oklch(60% 0.20 80));
+    --secondary-dark: light-dark(oklch(35% 0.20 80), oklch(85% 0.15 80));
 
     /* Success Colors */
-    --success-1: light-dark(oklch(90% 0.08 140), oklch(30% 0.08 140));
-    --success-2: light-dark(oklch(80% 0.12 140), oklch(40% 0.12 140));
-    --success-3: light-dark(oklch(70% 0.16 140), oklch(50% 0.16 140));
-    --success-4: light-dark(oklch(60% 0.20 140), oklch(60% 0.20 140));
-    --success-5: light-dark(oklch(50% 0.22 140), oklch(70% 0.22 140));
-    --success-6: light-dark(oklch(40% 0.20 140), oklch(80% 0.20 140));
-    --success-7: light-dark(oklch(30% 0.18 140), oklch(90% 0.18 140));
+    --success-light: light-dark(oklch(85% 0.10 140), oklch(40% 0.10 140));
+    --success-mid: light-dark(oklch(60% 0.20 140), oklch(60% 0.20 140));
+    --success-dark: light-dark(oklch(35% 0.20 140), oklch(85% 0.15 140));
 
     /* Danger Colors */
-    --danger-1: light-dark(oklch(90% 0.08 20), oklch(30% 0.08 20));
-    --danger-2: light-dark(oklch(80% 0.12 20), oklch(40% 0.12 20));
-    --danger-3: light-dark(oklch(70% 0.16 20), oklch(50% 0.16 20));
-    --danger-4: light-dark(oklch(60% 0.20 20), oklch(60% 0.20 20));
-    --danger-5: light-dark(oklch(50% 0.22 20), oklch(70% 0.22 20));
-    --danger-6: light-dark(oklch(40% 0.20 20), oklch(80% 0.20 20));
-    --danger-7: light-dark(oklch(30% 0.18 20), oklch(90% 0.18 20));
+    --danger-light: light-dark(oklch(85% 0.10 20), oklch(40% 0.10 20));
+    --danger-mid: light-dark(oklch(60% 0.20 20), oklch(60% 0.20 20));
+    --danger-dark: light-dark(oklch(35% 0.20 20), oklch(85% 0.15 20));
 
     /* Warning Colors */
-    --warning-1: light-dark(oklch(90% 0.08 90), oklch(30% 0.08 90));
-    --warning-2: light-dark(oklch(80% 0.12 90), oklch(40% 0.12 90));
-    --warning-3: light-dark(oklch(70% 0.16 90), oklch(50% 0.16 90));
-    --warning-4: light-dark(oklch(60% 0.20 90), oklch(60% 0.20 90));
-    --warning-5: light-dark(oklch(50% 0.22 90), oklch(70% 0.22 90));
-    --warning-6: light-dark(oklch(40% 0.20 90), oklch(80% 0.20 90));
-    --warning-7: light-dark(oklch(30% 0.18 90), oklch(90% 0.18 90));
+    --warning-light: light-dark(oklch(85% 0.10 90), oklch(40% 0.10 90));
+    --warning-mid: light-dark(oklch(60% 0.20 90), oklch(60% 0.20 90));
+    --warning-dark: light-dark(oklch(35% 0.20 90), oklch(85% 0.15 90));
 
     /* Info Colors */
-    --info-1: light-dark(oklch(90% 0.08 200), oklch(30% 0.08 200));
-    --info-2: light-dark(oklch(80% 0.12 200), oklch(40% 0.12 200));
-    --info-3: light-dark(oklch(70% 0.16 200), oklch(50% 0.16 200));
-    --info-4: light-dark(oklch(60% 0.20 200), oklch(60% 0.20 200));
-    --info-5: light-dark(oklch(50% 0.22 200), oklch(70% 0.22 200));
-    --info-6: light-dark(oklch(40% 0.20 200), oklch(80% 0.20 200));
-    --info-7: light-dark(oklch(30% 0.18 200), oklch(90% 0.18 200));
+    --info-light: light-dark(oklch(85% 0.10 200), oklch(40% 0.10 200));
+    --info-mid: light-dark(oklch(60% 0.20 200), oklch(60% 0.20 200));
+    --info-dark: light-dark(oklch(35% 0.20 200), oklch(85% 0.15 200));
 }

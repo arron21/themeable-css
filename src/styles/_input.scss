@@ -44,9 +44,9 @@
   input[type="password"],
   textarea,
   select {
-    background-color: var(--neutral-1);
-    color: var(--neutral-10);
-    border: 1px solid var(--neutral-10);
+    background-color: var(--neutral-light);
+    color: var(--neutral-dark);
+    border: var(--border-width) solid var(--neutral-mid);
     border-radius: 0.5rem;
     padding: 0.75rem 1rem;
     font-size: 1rem;
@@ -64,9 +64,9 @@
   input:focus,
   textarea:focus,
   select:focus {
-    border-color: var(--primary-5);
-    box-shadow: 0 0 0 3px
-      color-mix(in oklab, var(--primary-4) 50%, transparent);
+    border-color: var(--primary-mid);
+    box-shadow: 0 0 0 var(--border-width)
+      color-mix(in oklab, var(--primary-dark) 50%, transparent);
     outline: none;
   }
 }

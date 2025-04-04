@@ -1,7 +1,7 @@
 ul {
     margin: var(--pad) 0;
     padding: 0;
-    border: 1px solid var(--neutral-3);
+    border: var(--border-width) solid var(--neutral-mid);
     list-style: none;
     &.large {
         li {
@@ -20,7 +20,7 @@ ul {
             display: block;
             height: 1px;
             width: 100%;
-            background: var(--neutral-3);
+            background: var(--neutral-mid);
         }
 
     }
