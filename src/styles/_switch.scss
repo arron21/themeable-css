@@ -1,7 +1,8 @@
 .switch {
     margin: 6px 0;
     border: var(--border-width) solid;
-    border-color: light-dark(var(--neutral-mid) var(--neutral-light));
+    // border-color: light-dark( var(--neutral-light));
+    border-color: var(--neutral-dark);
     border-radius: 9999px;
     width: 40px;
     height: 20px;

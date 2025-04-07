@@ -1,6 +1,7 @@
 .card {
     margin: var(--pad) 0;
-    background: light-dark(oklch(95% 0 265), oklch(10% 0 265));
+    // background: light-dark(oklch(95% 0 265), oklch(10% 0 265));
+    background: var(--neutral-light);
     // border: var(--border-width) solid var(--neutral-light);
     border-radius: var(--radius);
     box-shadow: var(--card-shadow);

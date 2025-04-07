@@ -2,9 +2,9 @@
     color-scheme: light dark;
 
     /* Neutral Colors */
-    --neutral-light: light-dark(oklch(95% 0 265), oklch(20% 0 265));
-    --neutral-mid: light-dark(oklch(80% 0 265), oklch(30% 0 265));
-    --neutral-dark: light-dark(oklch(20% 0 265), oklch(90% 0 265));
+    --neutral-light: light-dark(oklch(98% 0 265), oklch(20% 0 265));
+    --neutral-mid: light-dark(oklch(85% 0 265), oklch(30% 0 265));
+    --neutral-dark: light-dark(oklch(20% 0 265), oklch(40% 0 265));
     
     /* Primary Colors */
     --primary-light: light-dark(oklch(85% 0.10 260), oklch(40% 0.10 260));
@@ -35,4 +35,8 @@
     --info-light: light-dark(oklch(85% 0.10 200), oklch(40% 0.10 200));
     --info-mid: light-dark(oklch(60% 0.20 200), oklch(60% 0.20 200));
     --info-dark: light-dark(oklch(35% 0.20 200), oklch(85% 0.15 200));
+}
+
+body {
+    background-color: var(--neutral-mid);
 }

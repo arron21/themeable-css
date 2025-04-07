@@ -5,7 +5,7 @@ button {
     border-radius: var(--radius);
     font-weight: 600;
     color: white;
-    background-color: var(--neutral-mid);
+    background-color: var(--neutral-dark);
     &[disabled] {
         opacity: .5;
         cursor: not-allowed;
